@@ -1,0 +1,30 @@
+<div class="container">
+  <button type="button" class="btn btn-default">Export</button>
+  <button type="button" class="btn btn-default">Print</button>
+  <button type="button" class="btn btn-danger" disabled>Delete</button>
+
+  <form class="form">
+    <input type="search" placeholder="Search" class="form-control " aria-label="Search">
+  </form>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><input type="checkbox"></th>
+        <th>SKU/UPC</th>
+        <th>Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td><input type="checkbox"></td>
+        <td><a href="/items/{{ item.ObfuscatedId }}">{{ item.Id }}</a></td>
+        <td>{{ item.Name }}</td>
+        <td>{{ item.Status }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+</div>
