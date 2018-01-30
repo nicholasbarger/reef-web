@@ -1,4 +1,22 @@
+.active {
+    border-bottom: 4px solid #3f8ce6;
+}
+
 .navbar {
-    box-shadow: 0 0 10px #3f8ce6;
+    box-shadow: 0 0 5px #3f8ce6;
     margin-bottom: 30px;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -15px
+}
+
+h1 {
+    color: #000;
+    margin-left: 15px;
+}
+
+.img-brand {
+    height: 50px;
 }

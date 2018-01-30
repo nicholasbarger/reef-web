@@ -1,7 +1,44 @@
-<nav class="navbar">
+<nav class="navbar navbar-expand-md" role="navigation">
   <a class="navbar-brand" href="#">
     <img class="img-brand" src="assets/logo.png" alt="Reef" title="Reef">
+    <h1 class="d-inline-block align-top">Data Reef</h1>
   </a>
 
-  <button class="btn btn-primary">Get Started</button>
+  <div class="collapse navbar-collapse" id="navbarContent" *ngIf="!isLoggedIn">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/features">Features</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/pricing">Pricing</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <button class="btn btn-primary" *ngIf="!isLoggedIn">Start for free</button>
+  
+
+  
+  <div class="collapse navbar-collapse" id="navbarContent" *ngIf="isLoggedIn">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/customers">Customers</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/items">Items</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/vendors">Vendors</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/help">Help</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/account">Account</a>
+      </li>
+    </ul>
+  </div>
 </nav>

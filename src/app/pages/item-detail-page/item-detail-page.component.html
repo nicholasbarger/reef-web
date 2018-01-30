@@ -1,21 +1,19 @@
-<div class="container">
-  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+<button type="button" class="btn btn-default" (click)="back()">Back</button>
 
-  <button type="button" class="btn btn-primary" (click)="edit()">Edit</button>
-  <button type="button" class="btn btn-default" (click)="print()">Print</button>
-  <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+<button type="button" class="btn btn-primary" (click)="edit()">Edit</button>
+<button type="button" class="btn btn-default" (click)="print()">Print</button>
+<button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
 
-  <h2>{{ item.Name }}</h2>
-  <span class="badge">{{ item.Status }}</span>
-  <div>
-    <p>
-      <label>SKU/UPC:</label>
-      <span>{{ item.Id }}</span>
-    </p>
+<h2>{{ item.Name }}</h2>
+<span class="badge">{{ item.Status }}</span>
+<div>
+  <p>
+    <label>SKU/UPC:</label>
+    <span>{{ item.Id }}</span>
+  </p>
 
-    <p>
-      <label>Description:</label>
-      <span>{{ item.Description }}</span>
-    </p>
-  </div>
+  <p>
+    <label>Description:</label>
+    <span>{{ item.Description }}</span>
+  </p>
 </div>
