@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // components
+import { ActionMenuComponent } from './components/action-menu/action-menu.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 
 // pages
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    ActionMenuComponent,
     ErrorPageComponent,
     HomePageComponent,
     NavigationComponent,
