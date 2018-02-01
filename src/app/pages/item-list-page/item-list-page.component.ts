@@ -12,8 +12,9 @@ import { ItemService } from '../../item.service';
 })
 export class ItemListPageComponent implements OnInit {
 
-  public actionMenuItems: Array<ActionMenuItem>
-  public items: Array<Item>;
+  actionMenuItems: Array<ActionMenuItem>;
+  columns: Array<string>;
+  items: Array<Item>;
 
   constructor(
     private itemService: ItemService,
@@ -29,6 +30,8 @@ export class ItemListPageComponent implements OnInit {
       new ActionMenuItem('Print', '/items/print'),
       new ActionMenuItem('Delete', '/items/delete')
     ];
+
+    this.columns = ['SKU/UPC', 'Name', 'Avg Cost', 'Avg Sale', 'Avg Margin', 'Status'];
 
     this.items = this.itemService.list();
 
