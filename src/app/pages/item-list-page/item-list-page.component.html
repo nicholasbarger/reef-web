@@ -3,7 +3,7 @@
   <app-action-menu [list]="actionMenuItems" class="float-right"></app-action-menu>
 </div>
 
-<form class="form">
+<form class="form mb-2">
   <input type="search" placeholder="Search" class="form-control " aria-label="Search">
 </form>
 
@@ -25,5 +25,13 @@
     </tr>
   </tbody>
   <tfoot>
+    <tr>
+      <td colspan="2">
+          <p>Displaying 4 of 250 records.</p>
+      </td>
+      <td colspan="2" class="text-right">
+        <p>1 | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a></p>
+      </td>
+    </tr>
   </tfoot>
 </table>

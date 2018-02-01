@@ -22,6 +22,7 @@ import { ItemService } from './item.service';
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'items', component: ItemListPageComponent },
+  { path: 'items/new', component: ItemListPageComponent },
   { path: 'items/:id', component: ItemDetailPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];

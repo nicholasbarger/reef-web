@@ -3,6 +3,6 @@
     Actions
   </button>
   <div class="dropdown-menu" aria-labelledby="action-menu">
-    <a class="dropdown-item" href="{{item.url}}" *ngFor="let item of list">{{item.label}}</a>
+    <a class="dropdown-item" routerLink="{{item.url}}" *ngFor="let item of list">{{item.label}}</a>
   </div>
 </div>

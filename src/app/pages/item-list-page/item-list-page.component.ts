@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { ActionMenuItem } from '../../components/action-menu/action-menu-item';
 import { Item } from '../../item';
@@ -14,17 +15,24 @@ export class ItemListPageComponent implements OnInit {
   public actionMenuItems: Array<ActionMenuItem>
   public items: Array<Item>;
 
-  constructor(private itemService: ItemService) { }
+  constructor(
+    private itemService: ItemService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.actionMenuItems = [
-      new ActionMenuItem('New', '#'),
-      new ActionMenuItem('Export', '#'),
-      new ActionMenuItem('Print', '#'),
-      new ActionMenuItem('Delete', '#')
+      new ActionMenuItem('New', '/items/new'),
+      new ActionMenuItem('Edit', '/items/edit'),
+      new ActionMenuItem('Export', '/items/export'),
+      new ActionMenuItem('Print', '/items/print'),
+      new ActionMenuItem('Delete', '/items/delete')
     ];
-    
+
     this.items = this.itemService.list();
+
+
   }
 
 }
