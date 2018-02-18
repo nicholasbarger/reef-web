@@ -12,7 +12,7 @@ export class NavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.isLoggedIn = true;
+    this.isLoggedIn = false;
   }
 
 }

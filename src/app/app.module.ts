@@ -18,6 +18,7 @@ import { ItemDetailPageComponent } from './pages/item-detail-page/item-detail-pa
 
 // services
 import { ItemService } from './item.service';
+import { LoginComponent } from './components/login/login.component';
 
 // routes
 const appRoutes: Routes = [
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     NavigationComponent,
     NotFoundPageComponent,
     ItemListPageComponent,
-    ItemDetailPageComponent
+    ItemDetailPageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
